@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("background1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+        }
+        .cont {
+            position:relative;
+            left:600px;
+            top:50px;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+    </div>
+    <div class="cont">
+        <form method="POST">
+            Username:<br>
+            <input type="text" name="username">
+            <span name="error"></span>
+            <br>
+            Password:<br>
+            <input type="password" name="password">
+            <span name="error"></span>
+            <br><br>
+        <input type="submit" value="Login" onclick="check(this.form)">
+        </form>
+        <script language = "javascript"> 
+            function check(form) 
+            {  
+                if(form.username.value == "" && form.password.value == "")
+                alert("Please enter your username and password");
+                else if (form.username.value == "")
+                alert("Please enter your username");
+                else if(form.password.value == "")
+                alert("Please enter your password");
+            }
+        </script>
+        <br>
+        <a href="registration">I dont have an account</a>
+    </div>
+</body>
+
+</html>
